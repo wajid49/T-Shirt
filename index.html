@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="./shirtlogo.png" alt="Logo" width="75px" height="75px">
+        <button class="toggle-menu">&#9776;</button>
+        <nav class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="section-container">
+        <div class="section">
+            <img src="./image_1.png" alt="" width="70px" height="70px">
+            <div class="sec1_text">
+                <h1 class="hedaing">Shirt 1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex <br>
+                    iste neque, sunt reprehenderit velit rerum, quod aut eius laboriosam <br>                </p>
+                <button class="readbtn"> Read More</button>
+            </div>
+        </div>
+        <div class="section">
+        <img src="./image_2.png" alt="" width="70px" height="70px">
+        <div class="sec1_text">
+            <h1 class="hedaing">Shirt 2</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex <br>
+                iste neque, sunt reprehenderit velit rerum, quod aut eius laboriosam <br>
+                
+            </p>
+            <button class="readbtn"> Read More</button>
+        </div>
+    </div>
+        <div class="section">
+        <img src="./image_3.png" alt="" width="70px" height="70px">
+        <div class="sec1_text">
+            <h1 class="hedaing">Shirt 3</h1>
+            <p class="paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ex <br>
+                iste neque, sunt reprehenderit velit rerum, quod aut eius laboriosam <br>
+              
+            </p>
+            <button class="readbtn"> Read More</button>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+<script>    
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.querySelector('.toggle-menu');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    toggleButton.addEventListener('click', function() {
+        navbarLinks.classList.toggle('active');
+    });
+
+    // Close the navbar when a link is clicked (optional)
+    navbarLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            navbarLinks.classList.remove('active');
+        });
+    });
+});
+
+</script>
+</html>
